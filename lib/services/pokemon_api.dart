@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:pokemao/models/navigable_pokemon.dart';
 import '../models/pokemon_list_response.dart';
 import '../models/pokemon_detail_response.dart';
 import '../utils/debounce.dart';
@@ -70,5 +71,12 @@ class PokemonApi {
       }
     });
     return completer.future;
+  }
+
+  Future<List<NavigablePokemon>> searchPokemons (String name) async{
+    final endpoint = Uri.parse(_baseUrl);
+
+    
+
   }
 }
